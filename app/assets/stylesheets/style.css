@@ -1,0 +1,63 @@
+/*CSS styles using position absolute and relative
+
+-----------------------------------------------------------
+|  wrapper                                                
+|   ----------------------------------------------------   
+|   |  container											
+|   |     ---------------   -----------------
+|   |
+|   |        box2             box1
+|   |      ---------------   -----------------
+|   | 
+|   -----------------------------------------------------
+|
+-----------------------------------------------------------
+
+
+
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper{
+	background-color: silver;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	padding-top: 1px; /*Trick to avoid margin collapsing*/
+	width: 90%;
+	height: 400px;
+}
+
+/*The container is relative to both boxes in order that the boxes move based on the container and not to he HTML*/
+#container{
+	position: relative;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	height: 200px;
+	background-color: olive;
+}
+
+#box1{
+	position: absolute;
+	right: 10%;
+	top:55px;
+	background-color: red;
+	width: 30%;
+	height: 90px;
+}
+
+#box2{
+	position: absolute;
+	top: 55px;
+	left: 10%;
+	background-color: green;
+	width: 30%;
+	height: 90px;
+}
+
